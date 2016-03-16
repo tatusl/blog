@@ -13,7 +13,7 @@ DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
 production = 'deploy@seppa-lassila.fi:22'
-dest_path = '/home/deploy/site'
+dest_path = '/var/www/seppa-lassila.fi/html'
 
 def clean():
     """Remove generated files"""

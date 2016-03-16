@@ -5,3 +5,4 @@ output
 
 # Random temp files
 *.save
+*.pid
