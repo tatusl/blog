@@ -2,7 +2,7 @@ Title: My blogging workflow with Pelican, Git and Travis CI
 Date: 2016-03-16 20:05
 Category: Tech
 Tags: introduction, pelican, workflow
-Slug: first-keyboard-test
+Slug: technical-blog-workflow
 
 Placeholder for initial post.
 
