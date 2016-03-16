@@ -9,7 +9,7 @@ LASTNAME = 'Seppä-Lassila'
 SITENAME = 'Tatu Seppä-Lassila'
 SITESUBTITLE = 'Blog'
 PROFILE_IMAGE = 'profile.jpg'
-BIO = 'Some cool description here. And also something. And this fact, and that. More placeholder text..'
+BIO = 'Computer Science major from Turku, Finland. General IT enthusiast. Feeling the urge to automate and improve things.'
 
 THEME = "themes/hyde"
 
