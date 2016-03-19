@@ -1,8 +1,8 @@
-Title: Technical blog workflow
+Title: How to create automated blogging workflow with Pelican, Git and Travis CI
 Date: 2016-03-19 15:20
 Category: Tech
 Tags: pelican, git, travis, workflow
-Slug: blog-technical-side
+Slug: automating-blogging-workflow
 
 ##Technical side of the blog
 
@@ -71,5 +71,3 @@ With this setup, the site is generated and deployed to the webserver after every
 This is not the easiest way to setup a blog and it took me a couple of nights to set this up. However, I am pleased by the result and now I can use online markup editors like [prose.io](http://prose.io/) to create and edit blog posts. Also, I learned the basics of using Travis CI in the process.
 
 Sources of this blog can be seen in [https://github.com/tatusl/blog](https://github.com/tatusl/blog)
-
-
