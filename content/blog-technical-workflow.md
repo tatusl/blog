@@ -12,7 +12,7 @@ I could have picked some blog engine like Wordpress of Ghost, but I decided to g
 
 ###Pelican
 
-My choice for the static site generator is [Pelican](http://getpelican.com). I have done some experimentation with [Jekyll](https://jekyllrb.com/), but somehow Pelican felt simpler and I have basic skills and experience with Python which Pelican uses. In this post, I don't cover specifics about setting up or working with Pelican, because there are already good guides how to do that. If you are interested, you should check [Official Pelican Quickstart guide] (http://docs.getpelican.com/en/3.6.3/quickstart.html).
+My choice for the static site generator is [Pelican](http://getpelican.com). I have done some experimentation with [Jekyll](https://jekyllrb.com/), but somehow Pelican felt simpler and I have basic skills and experience with Python which Pelican uses. In this post, I don't cover specifics about setting up or working with Pelican, because there are already good guides how to do that. If you are interested, you should check [Official Pelican Quickstart guide](http://docs.getpelican.com/en/3.6.3/quickstart.html).
 
 There are several ready-made themes for Pelican. Most of them are listed in the [pelican-themes](https://github.com/getpelican/pelican-themes) repository. I'm using [hyde](https://github.com/jvanz/pelican-hyde) by [jvanz](https://github.com/jvanz) with some personal modifications.
 
