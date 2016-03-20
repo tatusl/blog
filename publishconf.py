@@ -20,5 +20,5 @@ FEED_ALL_RSS = 'feeds/all.rss.xml'
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = "seppa-lassilablog"
 GOOGLE_ANALYTICS = "UA-75243119-1"
