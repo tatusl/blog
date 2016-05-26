@@ -1,14 +1,14 @@
-Title: Compile LaTex documents with Jenkins and publish PDF files automatically
+Title: Compile LaTex documents with Jenkins and publish pdf files automatically
 Date: 2016-05-26 23:30
 Category: Tech
 Tags: jenkins, latex
 Slug: compile-pdf-with-latex
 
-Writing my master's thesis has been of my main projects since September last year. Luckily, the end is near and my thesis is finished soon. At the start of my project, I wanted to come up with a solution to automatically publish the PDF file of my thesis compiled from LaTeX source files. More specifically, provide my supervisors one URL which always points to the latest of the thesis. With right packages installed, LaTeX can be done in Linux command line. This means the task can be automated with Jenkins.
+Writing my master's thesis has been of my main projects since September last year. Luckily, the end is near and my thesis is finished soon. At the start of my project, I wanted to come up with a solution to automatically publish the pdf file of my thesis compiled from LaTeX source files. More specifically, provide my supervisors one URL which always points to the latest of the thesis. With right packages installed, LaTeX can be done in Linux command line. This means the task can be automated with Jenkins.
 
 ##Defining the Jenkins build job
 
-I like to keep my LaTeX sources in Git repository for proper version control. So, first thing to do was to  install Git plugin for Jenkins. I used web hooks in GitHub to trigger the build after every commit to the repository. I created a new freestyle project, selected Git from the source code management section and provided URL to my repository. I also selected "Poll SCM" option from Build Triggers section without specifying the interval. This enables the ability to use GitHub web hook to trigger the build job. The only build step is to execute build.sh script which is located in the repository. The script will take care of compiling LaTeX sources to PDF, creating diff files and transferring the output PDF file to a remote server. The main idea of the script is taken from a GitHub Gist, but I can't remember the author, so I can't credit him/her. Below are contents of my build.sh.
+I like to keep my LaTeX sources in Git repository for proper version control. So, first thing to do was to  install Git plugin for Jenkins. I used web hooks in GitHub to trigger the build after every commit to the repository. I created a new freestyle project, selected Git from the source code management section and provided URL to my repository. I also selected "Poll SCM" option from Build Triggers section without specifying the interval. This enables the ability to use GitHub web hook to trigger the build job. The only build step is to execute build.sh script which is located in the repository. The script will take care of compiling LaTeX sources to pdf, creating diff files and transferring the output pdf file to a remote server. The main idea of the script is taken from a GitHub Gist, but I can't remember the author, so I can't credit him/her. Below are contents of my build.sh.
 
 ```bash
 #!/bin/sh
@@ -52,12 +52,12 @@ git diff HEAD^ HEAD | pygmentize -l diff -f html -O full | ssh $REMOTE_USER@$REM
 To summarize, the script:
 
 - defines some helper variables (details omitted)
-- compiles LaTeX files to PDF
+- compiles LaTeX files to pdf
 - creates the directory for old versions if it does not exist in the remote server
 - creates subfolder for this current build in the remote server
-- transfers the compiled PDF file to the subfolder in old versions directory
-- calculates diff file between this commit and the commit before that. Uses pygmentize for HTML formatting. Pipes the output over ssh to the remote server.
-- transfers compiled PDF to the root directory. This file is always the latest version
+- transfers the compiled pdf file to the subfolder in old versions directory
+- calculates diff file between this commit and the commit before that. Uses pygmentize for pdf formatting. Pipes the output over ssh to the remote server.
+- transfers compiled pdf to the root directory. This file is always the latest version
 - likewise, calculates and formats diff file to the root directory
 
 For build to be successful, correct LaTex packages need to be installed. In Ubuntu, texlive packages are a good starting point. Authentication to the remote server is done with ssh keys, so the password does not need to be provided.
