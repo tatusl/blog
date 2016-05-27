@@ -2,7 +2,7 @@ Title: Compile LaTex documents with Jenkins and publish pdf files automatically
 Date: 2016-05-26 23:30
 Category: Tech
 Tags: jenkins, latex
-Slug: compile-pdf-with-jenkins
+Slug: compile-latex-with-jenkins
 
 Writing my master's thesis has been one of my main projects since September last year. Luckily, the end is near and my thesis is finished soon. At the start of my project, I wanted to come up with a solution to automatically publish the pdf file of my thesis compiled from LaTeX source files. More specifically, provide my supervisors one URL which always points to the latest of the thesis. With right packages installed, LaTeX can be done in Linux command line. This means the task can be automated with Jenkins.
 
