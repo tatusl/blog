@@ -4,7 +4,7 @@ Category: Tech
 Tags: jenkins, latex
 Slug: compile-latex-with-jenkins
 
-Writing my master's thesis has been one of my main projects since September last year. Luckily, the end is near and my thesis is finished soon. At the start of my project, I wanted to come up with a solution to automatically publish the pdf file of my thesis compiled from LaTeX source files. More specifically, provide my supervisors one URL which always points to the latest of the thesis. With right packages installed, LaTeX can be done in Linux command line. This means the task can be automated with Jenkins.
+Writing my master's thesis has been one of my main projects since September last year. Luckily, the end is near and my thesis is finished soon. At the start of my project, I wanted to come up with a solution where I can locally edit LaTeX files with Texmaker and at the end of a writing session push the changes to Git repository. After that the system would automatically compile Latex to pdf and publish the pdf file to the webserver automatically. Advantage of this is that I can provide my supervisors single URL which always points to the latest of the thesis. With right packages installed, LaTeX can be done in Linux command line. This means the task can be automated with Jenkins.
 
 ##Defining the Jenkins build job
 
