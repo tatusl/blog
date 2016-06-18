@@ -16,8 +16,6 @@ ADD themes/ /opt/blog/themes/
 ADD pelicanconf.py \
     requirements.txt \
     buildAndServe.sh \
-    Makefile \
-    develop_server.sh \
     /opt/blog/
 
 # Change working dir
