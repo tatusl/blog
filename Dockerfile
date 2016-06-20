@@ -10,7 +10,7 @@ RUN apt-get -yqq install make \
 
 RUN easy_install pip
 
-# Copy needed files to the container
+# Copy the needed files to the container
 ADD content/ /opt/blog/content/
 ADD themes/ /opt/blog/themes/
 ADD pelicanconf.py \
